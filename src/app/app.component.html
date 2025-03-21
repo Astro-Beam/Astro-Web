@@ -1,0 +1,28 @@
+<!-- <app-layout>
+    <router-outlet />
+</app-layout> -->
+
+<mat-toolbar id="header" class="toolbar">
+    <img class="toolbar-logo" src="img/astrobeam-logo.png">
+    <span class="toolbar-spacer"></span>
+    @for (component of components; track component) {
+    <p id="toolbar-link-{{component.target}}" class="toolbar-links prevent-select"
+        (click)="changeRoute(component.target)">
+        {{ component.name| translate }}
+    </p>
+    }
+    @if (language == 'el') {
+    <span class="fi fi-us toolbar-flag" matTooltip="Change language to English" (click)="switchLanguage('en')"></span>
+    } @else {
+    <span class="fi fi-gr toolbar-flag" matTooltip="Αλλαγή γλώσσας στα Ελληνικά" (click)="switchLanguage('el')"></span>
+    }
+</mat-toolbar>
+
+
+<div class="content" (scroll)="resizeHeader($event)">
+    <router-outlet></router-outlet>
+
+    <div class="footer">
+        Copyright © 2024 -  Πολιτική Απορρήτου
+    </div>
+</div>

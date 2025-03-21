@@ -1,0 +1,84 @@
+.toolbar {
+    padding: 0 3rem;
+    height: 120px;
+    background-color: transparent;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    transition: 0.4s;
+}
+
+.toolbar-shrinked {
+    height: 70px;
+    background-color: black;
+    box-shadow: 0 0 .5em rgba(255, 255, 255, 0.5);
+}
+
+html:not([data-scroll='0']) {
+    .toolbar {
+        background-color: black;
+        box-shadow: 0 0 .5em rgba(255, 255, 255, 0.5);
+    }
+}
+
+.toolbar-logo {
+    height: 100px;
+    max-height: 95%;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar-links {
+    color: rgb(243, 243, 243);
+    font-weight: 550;
+    margin: 0 1rem;
+}
+
+.toolbar-links:hover {
+    color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+
+.toolbar-link-selected {
+    color: rgb(255, 208, 0);
+}
+
+.toolbar-link-selected:hover {
+    color: rgb(255, 208, 0);
+}
+
+.toolbar-flag {
+    height: 1rem;
+}
+
+.toolbar-flag:hover {
+    cursor: pointer;
+}
+
+.content {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+    z-index: 1;
+    background-image: url('../../public/img/background-dark.jpg');
+    color: antiquewhite;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 80px;
+    box-shadow: 0 0 .5em rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+
+    position:static;
+
+    bottom: 0;
+}
